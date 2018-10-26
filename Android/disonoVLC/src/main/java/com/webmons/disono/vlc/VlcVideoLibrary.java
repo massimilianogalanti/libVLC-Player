@@ -138,6 +138,8 @@ public class VlcVideoLibrary implements MediaPlayer.EventListener {
     private void setMedia(Media media) {
         media.addOption(":network-caching=" + Constants.BUFFER);
         media.addOption(":file-caching=" + Constants.BUFFER);
+        media.addOption(":clock-jitter=0");
+        media.addOption(":clock-syncro=0");
         media.addOption(":fullscreen");
         media.setHWDecoderEnabled(true, false);
 
